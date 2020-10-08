@@ -1,0 +1,19 @@
+h1 {
+  font-size: 2em;
+}
+
+.main-container {
+  background-color: lightgrey;
+  margin: 1em;
+}
+.serperator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.deco {
+  border-bottom: 3px black;
+  border-style: inset;
+  width: 90%;
+}
