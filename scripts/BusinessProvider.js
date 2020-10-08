@@ -1,5 +1,5 @@
-const businessCollection = [
-    const businesses = [
+
+const businesses = [
     {
         purchasingAgent: { nameLast: "Kirlin", nameFirst: "Kristy" },
         phoneWork: "089.129.2290 x9400",
@@ -111,4 +111,7 @@ const businessCollection = [
         addressCity: "Watrous"
     }
 ];
-]
+
+export const useBusinesses = () => {
+    return [...businesses]
+}
