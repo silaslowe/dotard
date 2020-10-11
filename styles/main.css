@@ -10,6 +10,7 @@ h3 {
 .main-container {
   background-color: lightgrey;
   margin: 1em;
+  padding: 1em;
 }
 .serperator {
   display: flex;
