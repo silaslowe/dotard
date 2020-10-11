@@ -117,3 +117,7 @@ export const useBusinesses = () => {
 export const useNY = () => {
   return [...businesses].filter((business) => business.addressStateCode === "NY");
 };
+
+export const useManufacturing = () => {
+  return [...businesses].filter((business) => business.companyIndustry === "Manufacturing");
+};

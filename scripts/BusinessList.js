@@ -1,4 +1,4 @@
-import { useBusinesses, useNY } from "./BusinessProvider.js";
+import { useBusinesses, useNY, useManufacturing } from "./BusinessProvider.js";
 import { business } from "./Business.js";
 
 export const BusinessList = () => {
@@ -6,12 +6,15 @@ export const BusinessList = () => {
   // Company Array
   const businesses = useBusinesses();
   const nYBusinesses = useNY();
+  const manufactionBusinesses = useManufacturing();
 
   let activeBusinesses = "";
   let nYActiveBusinesses = "";
+  let manufactionActiveBusinesses = "";
 
   businesses.forEach((company) => (activeBusinesses += business(company)));
   nYBusinesses.forEach((company) => (nYActiveBusinesses += business(company)));
+  manufactionBusinesses.forEach((company) => (manufactionActiveBusinesses += business(company)));
 
   return (content.innerHTML += `
       <section class="businesses">
@@ -20,10 +23,15 @@ export const BusinessList = () => {
                 ${activeBusinesses}
               </div>
           </section>
-
+          
           <article class="businessList--newYork">
           <h2>New York Businesses</h2>
           ${nYActiveBusinesses}
+          </article>
+
+          <article class="businessList--manufacturing">
+          <h2>Manufacturing Businesses</h2>
+          ${manufactionActiveBusinesses}
           </article>
       `);
 };
