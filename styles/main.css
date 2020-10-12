@@ -14,11 +14,12 @@ h3 {
 
 .main-container {
   background-color: lightgrey;
-  width: 80%
+  width: 80%;
 }
+
 .business-card {
   border-radius: 25px;
-  width 30%
+  width: 30%;
 }
 
 .serperator {
