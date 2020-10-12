@@ -10,8 +10,10 @@ export const BusinessList = () => {
 
   document.querySelector("#companySearch").addEventListener("keypress", (keyPressEvent) => {
     if (keyPressEvent.charCode === 13) {
-      const foundBusiness = businesses.find((business) =>
-        business.companyName.includes(keyPressEvent.target.value)
+      const foundBusiness = businesses.find(
+        (business) =>
+          business.purchasingAgent.nameLast.includes(keyPressEvent.target.value) ||
+          business.purchasingAgent.nameFirst.includes(keyPressEvent.target.value)
       );
       if (!foundBusiness) {
         alert("No results found");
@@ -29,6 +31,9 @@ export const BusinessList = () => {
     }
   });
 };
+
+// purchasingAgent: { nameLast: "Kling", nameFirst: "Ellie" },
+
 // const nYBusinesses = useNY();
 // const manufactionBusinesses = useManufacturing();
 
