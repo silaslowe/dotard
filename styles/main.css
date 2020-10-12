@@ -1,17 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2 {
   font-size: 3em;
   text-decoration: underline;
 }
 h3 {
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .main-container {
   background-color: lightgrey;
-  margin: 1em;
-  padding: 1em;
+  width: 80%
 }
+.business-card {
+  border-radius: 25px;
+  width 30%
+}
+
 .serperator {
   display: flex;
   justify-content: center;
